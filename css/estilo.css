@@ -1,0 +1,150 @@
+/*------- Background da pagina -------*/
+body{
+  background-image: url(../images/banner.png);
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media(min-width: 601px){
+  body{
+    background-size: 100% 100%;
+  }
+}
+
+/*-------- Paginação --------*/
+
+.paginacao{
+  margin-bottom: 0px !important;
+  padding: 2% 5%;
+  overflow-x: hidden;
+}
+
+.paginacao h1{
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.paginacao img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1em;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+  margin-top: 2em;
+  padding-top: 50px;
+}
+
+.paginacao .col:hover img{
+  filter: grayscale(0);
+  border-bottom: 4px solid #db8129;
+  padding-top: 0;
+}
+
+.paginacao p{
+  font-size: 1.25em;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.paginacao .pag.active{
+  display: block;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.paginacao .pag{
+  display: none;
+}
+
+.paginacao .btn{
+  line-height: 0px;
+  height: 30px;
+  padding: .5em .5em;
+  margin: 2em .5em;
+  background-color: rgba(0,0,0,0.5);
+  border: 2px solid #666;
+  border-radius: 25%;
+}
+
+.paginacao .botoes li{
+  width: 20px;
+  height: 20px;
+  margin: .5em;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-table;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.paginacao .botoes li.active{
+  background-color: #db8129;
+}
+
+.paginacao .pagination li span{
+  font-size: 1.2rem;
+  padding: 0 10px;
+  line-height: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.paginacao .pagination li a{
+  color: white !important;
+}
+
+.paginacao .pagination li{
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.paginacao .pagination li.active{
+  background-color: #db8129 !important;
+}
+
+.paginacao .pagination li.disabled{
+  opacity: 0;
+  cursor: default;
+}
+
+/*-------- Animação dos blocos ---------*/
+
+@-webkit-keyframes clean {
+  0% {
+   opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+}
+}
+
+@keyframes clean {
+  0% {
+   opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+}
+}
+
+.clean {
+  -webkit-animation-name: clean;
+  animation-name: clean;
+}
+
+
+/*--------- Tipografia ----------*/
+
+@font-face{
+  font-family: 'alt';
+  src: url(../fonts/montserrat.ttf);
+}
+
+*{
+  font-family: 'alt';
+}
